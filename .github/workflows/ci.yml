@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@main
       - name: copy file via ssh password
         uses: appleboy/scp-action@main
-    with:
+    env:
       host: ${{secrets.REMOTE_HOST}}
       username: ${{secrets.REMOTE_USER}}
       key: ${{secrets.SERVER_SSH_KEY}}
