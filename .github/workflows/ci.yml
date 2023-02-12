@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@main
       - name: copy file via ssh password
-        uses: appleboy/scp-action@main
+        uses: appleboy/scp-action@master
     env:
       host: ${{secrets.REMOTE_HOST}}
       username: ${{secrets.REMOTE_USER}}
