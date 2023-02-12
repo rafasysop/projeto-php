@@ -7,6 +7,7 @@
     <title>Projeto Iniciando php</title>
   </head>
   <body>
-    <h1>PHP</h1>
+    <h1>Servidor PHP</h1>
+    <?= phpinfo() ?>
   </body>
 </html>
