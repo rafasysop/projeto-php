@@ -7,12 +7,8 @@
     <title>Projeto Iniciando php</title>
   </head>
   <body>
-    <?php   
-      $hoje = date('d/m/Y');
-      echo $hoje;
-    ?>
     <h1>Servidor PHP</h1>
-    <?      
+    <?php
       $hoje = date('d/m/Y');
       echo $hoje;
     ?>
