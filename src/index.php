@@ -10,6 +10,8 @@
     <h1>Servidor PHP</h1>
     <?php
       phpinfo();
+      $hoje = date('d/m/Y');
+      echo $hoje;
     ?>
   </body>
 </html>
