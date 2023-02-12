@@ -3,14 +3,17 @@ on:
   push:
     branches:
       - main
+      
 jobs:
   build:
     runs-on: self-hosted
     steps:
-      - name: checkout
-        uses: actions/checkout@v1
+      - name: Checkout
+      uses: actions/checkout@v3
+
       - name: deploy
-        uses: actions/ssh-deploy@main
+      uses: actions/ssh-deploy@main
+      
       env:
         SSH_PRIVATE_KEY: ${{secrets.SERVER_SSH_KEY}}
         SOURCE: "src/"
