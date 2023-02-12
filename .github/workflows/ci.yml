@@ -8,19 +8,18 @@ jobs:
     name: Build
     runs-on: self-hosted
     steps:
-      - uses: actions/checkout@main
+      - uses: actions/checkout@v3
+      with:
+        ref: main
+        ssh-key: ${{secrets.SERVER_SSH_KEY}}
       - name: enter directory
         run: cd C:\Users\Administrator\php
-      - name: pull content
-        run: git pull
-      # - name: copy file via ssh password
-      # run: cd C:\Users\Administrator\php && git pull
-      # uses: appleboy/scp-action@master
-    env:
-      host: ${{secrets.REMOTE_HOST}}
-      username: ${{secrets.REMOTE_USER}}
-      key: ${{secrets.SERVER_SSH_KEY}}
-      passphrase: ${{ secrets.PASSPHRASE }}
-      port: ${{secrets.REMOTE_PORT}}
-      source: "src/"
-      target: ${{secrets.REMOTE_TARGET}}
+
+    # env:
+    #   host: ${{secrets.REMOTE_HOST}}
+    #   username: ${{secrets.REMOTE_USER}}
+    #   key: ${{secrets.SERVER_SSH_KEY}}
+    #   passphrase: ${{ secrets.PASSPHRASE }}
+    #   port: ${{secrets.REMOTE_PORT}}
+    #   source: "src/"
+    #   target: ${{secrets.REMOTE_TARGET}}
