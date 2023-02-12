@@ -8,7 +8,7 @@ jobs:
     name: Build
     runs-on: self-hosted
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@main
       with:
         ref: main
         ssh-key: ${{secrets.SERVER_SSH_KEY}}
