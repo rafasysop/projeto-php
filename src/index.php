@@ -12,7 +12,7 @@
       $hoje = date('d/m/Y');
       echo $hoje;
 
-      echo "5 + 5 é =" + 5 + 5
+      echo "5 + 5 é =" + 5 + 5;
 
       phpinfo();
     ?>
